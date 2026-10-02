@@ -2,7 +2,7 @@
 name: "Code Reviewer"
 description: "Specialized code review agent for correctness, maintainability, security, and test coverage. Uses repository instructions and path-specific guidance for evidence-based review."
 model: GPT-4.1
-tools: ["codebase", "read_file", "search", "grep", "list_dir", "get_changed_files", "get_worktree_status"]
+tools: ["read_file", "list_dir", "search"]
 ---
 
 # Code Reviewer Agent
@@ -85,6 +85,12 @@ Use this structure:
 - Keep findings limited to the reported or reviewed change.
 - Prefer actionable, concrete, evidence-based feedback.
 
-## Tooling
+## Granted tools and capabilities
 
-Use only read-only review tools necessary to inspect code and tests.
+The Code Reviewer has access to these read-only tools:
+
+- **read_file**: Inspect individual file contents to analyze implementation, tests, and repository instructions.
+- **list_dir**: Browse repository structure and identify relevant code files and test locations.
+- **search**: Query the repository to find related code, test cases, and usage patterns.
+
+These tools enable inspection of code and tests without any write capability.
