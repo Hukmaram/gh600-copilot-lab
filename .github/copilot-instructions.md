@@ -1,82 +1,53 @@
 # GitHub Copilot Repository Instructions
 
-## Repository Purpose
-This is a learning and experimentation repository for GitHub Copilot development practices and features. It serves as a lab environment for testing Copilot integration patterns and best practices.
+## Current repository state
+This repository currently contains only the `.github/` directory and this file, `.github/copilot-instructions.md`.
 
-## Project Structure
-```
-.
-├── .github/
-│   ├── copilot-instructions.md   (this file)
-│   └── workflows/                 (GitHub Actions workflows)
-├── src/                           (source code)
-├── tests/                         (test suites)
-├── docs/                          (documentation)
-├── package.json                   (Node.js dependencies, if applicable)
-└── README.md                      (project overview)
-```
+Verified repository facts:
+- There is no application source directory at the root.
+- There is no `README.md` in the repository.
+- There is no `package.json`, lockfile, or other package manifest.
+- There is no test suite or test configuration file.
+- There are no build, lint, or CI workflow files under `.github/workflows/`.
+- There are no `src/`, `tests/`, `docs/`, or other project directories yet.
 
-## Coding Conventions
-- Use clear, descriptive variable and function names
-- Include JSDoc/TSDoc comments for public APIs
-- Follow language-specific formatting standards (Prettier for JS/TS, etc.)
-- Keep functions focused and under 50 lines when possible
-- Use meaningful commit messages (imperative mood, clear scope)
+If a file or directory is not present here, treat it as not yet defined rather than assuming it exists.
 
-## Development Workflow
-1. Create a feature branch from `main`: `git checkout -b feature/description`
-2. Make focused, atomic commits
-3. Write or update tests alongside code changes
-4. Submit a pull request with a clear description
-5. Ensure all CI checks pass before merging
-6. Use squash merge for feature branches to keep history clean
+## Repository purpose
+The repository purpose is not yet defined by project files. Do not assume a language, framework, runtime, or product scope without evidence from the repository.
 
-## Build Commands
-```bash
-# Install dependencies
-npm install
-
-# Build project (if applicable)
-npm run build
-
-# Start development server (if applicable)
-npm run dev
+## Project structure
+```text
+.github/
+  copilot-instructions.md
 ```
 
-## Test Commands
-```bash
-# Run all tests
-npm test
+This is the full structure currently present in the repository. No application code or tooling is checked in yet.
 
-# Run tests in watch mode
-npm run test:watch
+## Coding conventions
+- Prefer minimal, explicit changes.
+- Do not invent project structure or conventions that are not present in the repository.
+- Keep instructions aligned with the files that actually exist now.
+- When a new project is added, verify the real structure before describing it.
 
-# Run tests with coverage
-npm run test:coverage
-```
+## Development workflow
+- Check the repository state before proposing code, commands, or workflows.
+- Keep changes focused and reviewable.
+- Update these instructions only when the repository adds verified facts.
+- If the project is not yet defined, say so clearly rather than guessing.
 
-## Important Architectural Conventions
-- Separate concerns: keep API handlers, business logic, and data models distinct
-- Use environment variables for configuration (documented in `.env.example`)
-- Follow the repository's existing directory structure for new features
-- Maintain backward compatibility where possible
-- Document breaking changes prominently in PRs
+## Build commands
+Not yet defined. There is no repository evidence for a build system, package manager, or runtime command.
 
-## Expectations for Making Changes
-- **Before coding:** Check existing issues and PRs to avoid duplicate work
-- **During development:** Keep changes focused to a single feature or fix
-- **In pull requests:** Provide context and rationale for changes
-- **Code review:** Be responsive to feedback and explain design decisions
-- **Testing:** Ensure new features include appropriate test coverage (aim for 80%+)
-- **Documentation:** Update README or docs/ if behavior or setup changes
-- **Performance:** Consider impact of changes on existing performance
-- **Dependencies:** Minimize new dependencies; document the rationale if added
+## Test commands
+Not yet defined. There is no repository evidence for a test framework or test runner.
 
-## Quick Links
-- **Documentation:** See `docs/` directory
-- **Issues:** Report bugs or request features on GitHub Issues
-- **Discussions:** Use GitHub Discussions for design decisions and questions
+## Important architectural conventions
+None are currently defined by the repository. Do not assume layered architecture, frameworks, service boundaries, or deployment patterns without evidence.
 
----
-
-*These instructions are for Copilot-assisted development. Update as the project evolves.*
+## Expectations for making changes
+- Verify every fact against the actual repository before writing instructions or proposing commands.
+- Do not create application code or unrelated files unless explicitly requested.
+- Do not invent source directories, dependencies, CI workflows, or build/test commands.
+- If information is unavailable, state: "Not yet defined."
+- Keep this file accurate to the repository's current state and update it only when actual repository evidence changes.
